@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carving My Path — Layla</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="header__inner">
+        <a class="logo" href="#main" aria-label="Layla, go to main">layla</a>
+        <nav class="nav" aria-label="Primary">
+          <a href="#main" data-section="main">Main</a>
+          <a href="#chapter1" data-section="chapter1">Level 1: Adulting</a>
+          <a href="#chapter2" data-section="chapter2">Level 2: Freedom</a>
+          <a href="#contact" data-section="contact">Contact</a>
+        </nav>
+
+        <button
+          class="menuBtn"
+          id="menuBtn"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileNav"
+        >
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <div class="mobileNav" id="mobileNav" hidden>
+        <a href="#main" data-section="main">Main</a>
+        <a href="#chapter1" data-section="chapter1">Level 1: Adulting</a>
+        <a href="#chapter2" data-section="chapter2">Level 2: Freedom</a>
+        <a href="#contact" data-section="contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- MAIN: cursive title over fireworks video -->
+      <section class="hero" id="main">
+        <!--
+          PUT YOUR FIREWORKS VIDEO HERE:
+          1) Save the file as: assets/video/fireworks.mp4
+          2) Keep the <source src="assets/video/fireworks.mp4"> line below.
+          If you use another name (e.g. show.mp4), change only that src.
+          A muted looping video is required for autoplay in browsers.
+        -->
+        <video
+          class="hero__video"
+          id="heroVideo"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="assets/img/hero-fallback.svg"
+        >
+          <source src="assets/video/fireworks.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__veil"></div>
+        <div class="hero__content">
+          <p class="hero__kicker">Suyeon Park | Entrepreneurship Student</p>
+          <h1 class="hero__title">Carving My Path</h1>
+          <p class="hero__sub">
+            Layla’s history of work, community, and a new beginning at
+            university.
+          </p>
+          <a class="scrollHint" href="#chapter1">Scroll to Chapter 1</a>
+        </div>
+      </section>
+
+      <!-- CHAPTER 1: ages 17–20 -->
+      <section class="section" id="chapter1">
+        <div class="container">
+          <p class="chapterLabel">Level 1: Adulting & Building</p>
+          <h2 class="section__title">Hello, Real World.</h2>
+          <p class="section__lead">
+            The era of learning how to be a 'real adult'—building real-world
+            products through code and screaming my lungs out at the baseball
+            stadium.
+          </p>
+
+          <article class="storyRow">
+            <figure class="polaroid">
+              <!--
+                PUT YOUR DEVELOPER PHOTO HERE:
+                Replace this file: assets/img/dev.jpg
+                (keep the same file name, or change src below)
+              -->
+              <img
+                src="assets/img/dev.jpeg"
+                alt="Layla working as a developer"
+              />
+              <figcaption>Developer years</figcaption>
+            </figure>
+            <div class="storyText">
+              <h3>Building as a developer</h3>
+              <p>
+                I started dreaming of becoming a developer in high school. Right
+                after I graduated, I joined a startup. My first company was
+                <strong>'Wash Swat'</strong>, which runs a contactless laundry
+                service.
+              </p>
+              <p>
+                There I worked as a workflow developer and built internal
+                websites for many corners of the company—the factory, customer
+                support, marketing, and more. Along the way I learned how
+                software actually gets used, and how to talk with people on the
+                ground.
+              </p>
+              <p>
+                My second company offered corporate M&amp;A services. I joined
+                as one of the very first members, so I got to wear many hats.
+                The work I loved most was turning results into numbers, making
+                small lean changes, shipping them right away, and watching
+                performance grow. Because the team was small, I also did work
+                that had nothing to do with engineering. When an M&amp;A manager
+                was away, I tried real brokerage—and although the deal was
+                small, I got to own it through to closing.
+              </p>
+            </div>
+          </article>
+
+          <article class="storyRow storyRow--reverse">
+            <figure class="polaroid">
+              <!--
+                PUT YOUR BASEBALL CLUB LOGO / PHOTO HERE:
+                Replace this file: assets/img/baseball-club.jpg
+              -->
+              <img
+                src="assets/img/baseball-club.jpeg"
+                alt="Logo of Layla’s baseball community"
+              />
+              <figcaption>Baseball community</figcaption>
+            </figure>
+            <div class="storyText">
+              <h3>Running a baseball community</h3>
+              <p>
+                After seventeen, my life was not only work. I skied, watched
+                movies, traveled—but baseball was the thing I loved most. In the
+                KBO, I cheer for the Doosan Bears. Not many of my friends were
+                Bears fans, so I started a baseball community myself.
+              </p>
+              <p>
+                Fans of all ten KBO teams could join, and I aimed it at people
+                in their twenties. Through nights at the stadium and weekend
+                trips, I made a lot of friends. Today, about a hundred of us are
+                in it together.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- CHAPTER 2: university life (20+) -->
+      <section class="section section--navy" id="chapter2">
+        <div class="container">
+          <p class="chapterLabel">Level 2: Pivot & Freedom</p>
+          <h2 class="section__title">Designing My Own Rules.</h2>
+          <p class="section__lead">
+            Stepping out of the safe code editor. Now carving my own path out on
+            the snowy slopes and in the boundless world of business.
+          </p>
+
+          <article class="storyRow">
+            <figure class="polaroid">
+              <!--
+                PUT YOUR SOOKMYUNG PHOTO HERE:
+                Replace this file: assets/img/sookmyung.jpg
+              -->
+              <img
+                src="assets/img/sookmyung.jpeg"
+                alt="Sookmyung Women’s University"
+              />
+              <figcaption>Sookmyung</figcaption>
+            </figure>
+            <div class="storyText">
+              <h3>Why entrepreneurship</h3>
+              <p>
+                For three years I worked as a developer at startups and
+                collected a wide range of real experience. I didn’t only write
+                code—I also took on marketing, sales, and operations. That mix
+                made me look at my strengths again.
+              </p>
+              <p>
+                Sitting still and focusing on code was not as natural for me as
+                work where I could actually move the numbers, especially sales.
+                I also started to think that, as AI grows, a strong foundation
+                will help more than chasing every new tool. New technologies
+                keep arriving, and AI learns faster than I do—but I am still the
+                one who has to decide.
+              </p>
+              <p>
+                So I chose Entrepreneurship, a major where I can learn how to
+                use management, startups, marketing, and sales in real life. I’m
+                only a first-year, so I haven’t learned everything in the
+                department yet. Lately I’ve been studying big data and
+                marketing, and it has been powerful to stack that theory onto
+                work I used to do without a textbook. I also love being in
+                school—a place where it’s okay to be incomplete, and where I can
+                keep challenging myself.
+              </p>
+            </div>
+          </article>
+
+          <article class="storyRow storyRow--reverse">
+            <figure class="polaroid">
+              <!--
+                PUT YOUR SKIING PHOTO HERE:
+                Replace this file: assets/img/ski.jpg
+              -->
+              <img src="assets/img/ski.jpeg" alt="Layla skiing" />
+              <figcaption>On the slopes</figcaption>
+            </figure>
+            <div class="storyText">
+              <h3>Skiing, a new season</h3>
+              <p>
+                Skiing is a sport I started last winter. With Korea’s heavy
+                snow, it feels like a sport this country is built for. There are
+                about ten ski resorts here, and I ski most often at
+                <strong>Jisan Forest Resort</strong>. It’s about an hour from
+                Seoul, and a little more affordable than many other mountains.
+              </p>
+              <p>
+                I went a lot with friends, and this time I joined
+                <strong>Sookmyung Ski</strong>, a club under the university ski
+                federation. It’s a training-camp style club—a good place to
+                learn skiing more seriously. I can ski basic long turns now, and
+                my goal this season is to take on carving.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="container contact__inner">
+          <p class="chapterLabel">The next page</p>
+          <h2 class="section__title">If you’re curious about my story</h2>
+          <p class="section__lead">
+            I’d love to hear from you. Say hello on Instagram or send me an
+            email.
+          </p>
+          <div class="contactCard">
+            <a
+              class="contactItem"
+              href="https://instagram.com/clapk1te"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <!-- Replace your_id with your Instagram handle in both the href and the text. -->
+              <span>Instagram</span>
+              <strong>@clapk1te</strong>
+            </a>
+            <a class="contactItem" href="mailto:clapkite@sookmyung.ac.kr">
+              <!-- Replace your@email.com in both the href and the text. -->
+              <span>Email</span>
+              <strong>clapkite@sookmyung.ac.kr</strong>
+            </a>
+          </div>
+          <p class="footer">
+            © <span id="year"></span> Layla. Carving My Path.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

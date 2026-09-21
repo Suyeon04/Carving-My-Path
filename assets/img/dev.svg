@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500">
+  <rect width="400" height="500" fill="#243656"/>
+  <text x="200" y="248" text-anchor="middle" fill="#f3ead9" font-family="Georgia, serif" font-size="18">Your photo here</text>
+  <text x="200" y="276" text-anchor="middle" fill="#c4a574" font-family="Georgia, serif" font-size="13">assets/img/dev.jpg</text>
+</svg>
