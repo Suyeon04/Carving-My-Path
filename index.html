@@ -17,7 +17,8 @@
       <div class="header__inner">
         <a class="logo" href="#main" aria-label="Layla, go to main">layla</a>
         <nav class="nav" aria-label="Primary">
-          <a href="#main" data-section="main">Main</a>
+          <a href="#introduce" data-section="introduce">Introduce</a>
+          <!-- 추가됨 -->
           <a href="#chapter1" data-section="chapter1">Level 1: Adulting</a>
           <a href="#chapter2" data-section="chapter2">Level 2: Freedom</a>
           <a href="#contact" data-section="contact">Contact</a>
@@ -36,10 +37,11 @@
         </button>
       </div>
       <div class="mobileNav" id="mobileNav" hidden>
-        <a href="#main" data-section="main">Main</a>
-        <a href="#chapter1" data-section="chapter1">Level 1: Adulting</a>
-        <a href="#chapter2" data-section="chapter2">Level 2: Freedom</a>
-        <a href="#contact" data-section="contact">Contact</a>
+        <a href="#introduce">Introduce</a>
+        <!-- 추가됨 -->
+        <a href="#chapter1">Level 1: Adulting</a>
+        <a href="#chapter2">Level 2: Freedom</a>
+        <a href="#contact">Contact</a>
       </div>
     </header>
 
@@ -72,12 +74,55 @@
             Layla’s history of work, community, and a new beginning at
             university.
           </p>
-          <a class="scrollHint" href="#chapter1">Scroll to Chapter 1</a>
+          <a class="scrollHint" href="#chapter1">Scroll to My Story</a>
+        </div>
+      </section>
+      <!-- INTRODUCE: About Me -->
+      <section class="section" id="introduce">
+        <div class="container">
+          <p class="chapterLabel">Prologue</p>
+          <h2 class="section__title">Hi, I'm Layla.</h2>
+          <p class="section__lead">
+            Welcome to my personal space. Let me tell you a little bit about who
+            I am and why I built this.
+          </p>
+
+          <article class="storyRow storyRow--reverse">
+            <!-- 왼쪽 글 영역 -->
+            <div class="storyText reveal">
+              <h3>The Girl Behind the Screen</h3>
+              <p>
+                I'm Suyeon Park, a 21-year-old freshman majoring in
+                Entrepreneurship at Sookmyung Women's University. My English
+                name is Layla, which is much easier to say, so please feel free
+                to call me that!
+              </p>
+              <p>
+                I started my university life a little later than my peers.
+                Because I took a completely different path to get here, I
+                thought it would be meaningful to share my unique history.
+                That's exactly why I created this website.
+              </p>
+              <p>
+                By the way, instead of using standard website builders like Wix,
+                I decided to play to my strengths. I coded this entire page from
+                scratch using my experience as a developer. I hope you enjoy
+                exploring my story!
+              </p>
+            </div>
+
+            <!-- 오른쪽 사진 영역 (오리지널 포맷 유지) -->
+            <figure class="polaroid reveal">
+              <!-- 사진 파일 이름(assets/img/profile.jpg 등)을 본인 사진 이름으로 바꿔주세요 -->
+              <img src="assets/img/profile.jpeg" alt="Layla Profile Picture" />
+              <figcaption>Layla (Suyeon)</figcaption>
+            </figure>
+          </article>
         </div>
       </section>
 
       <!-- CHAPTER 1: ages 17–20 -->
-      <section class="section" id="chapter1">
+      <section class="section section--navy" id="chapter1">
         <div class="container">
           <p class="chapterLabel">Level 1: Adulting & Building</p>
           <h2 class="section__title">Hello, Real World.</h2>
@@ -160,7 +205,7 @@
       </section>
 
       <!-- CHAPTER 2: university life (20+) -->
-      <section class="section section--navy" id="chapter2">
+      <section class="section" id="chapter2">
         <div class="container">
           <p class="chapterLabel">Level 2: Pivot & Freedom</p>
           <h2 class="section__title">Designing My Own Rules.</h2>
@@ -240,7 +285,7 @@
         </div>
       </section>
 
-      <section class="section contact" id="contact">
+      <section class="section contact section--navy" id="contact">
         <div class="container contact__inner">
           <p class="chapterLabel">The next page</p>
           <h2 class="section__title">If you’re curious about my story</h2>

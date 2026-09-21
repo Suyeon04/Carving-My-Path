@@ -403,7 +403,7 @@ a {
       rgba(196, 165, 116, 0.18),
       transparent 40%
     ),
-    var(--beige);
+    var(--navy-soft);
 }
 
 .contact__inner {
@@ -447,7 +447,7 @@ a {
 .footer {
   margin: 40px 0 0;
   font-size: 13px;
-  color: rgba(21, 34, 56, 0.6);
+  color: var(--beige);
 }
 
 /* 스크롤 애니메이션 클래스 */

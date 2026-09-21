@@ -5,7 +5,8 @@ const hero = document.getElementById("main");
 const heroVideo = document.getElementById("heroVideo");
 const yearEl = document.getElementById("year");
 const navLinks = document.querySelectorAll(".nav a[data-section]");
-const sections = ["main", "chapter1", "chapter2", "contact"]
+const sections = ["main", "introduce", "chapter1", "chapter2", "contact"]
+
   .map((id) => document.getElementById(id))
   .filter(Boolean);
 
@@ -15,7 +16,7 @@ if (yearEl) {
 
 const setHeaderState = () => {
   if (header) {
-    header.classList.toggle("is-scrolled", window.scrollY > 40);
+    header.classList.toggle("is-scrolled", window.scrollY > 900);
   }
 };
 
