@@ -5,7 +5,14 @@ const hero = document.getElementById("main");
 const heroVideo = document.getElementById("heroVideo");
 const yearEl = document.getElementById("year");
 const navLinks = document.querySelectorAll(".nav a[data-section]");
-const sections = ["main", "introduce", "chapter1", "chapter2", "contact"]
+const sections = [
+  "main",
+  "introduce",
+  "chapter1",
+  "chapter2",
+  "news-analysis",
+  "contact",
+]
 
   .map((id) => document.getElementById(id))
   .filter(Boolean);
