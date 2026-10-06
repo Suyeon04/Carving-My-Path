@@ -4,26 +4,13 @@ const mobileNav = document.getElementById("mobileNav");
 const hero = document.getElementById("main");
 const heroVideo = document.getElementById("heroVideo");
 const yearEl = document.getElementById("year");
-const navLinks = document.querySelectorAll(".nav a[data-section]");
-const sections = [
-  "main",
-  "introduce",
-  "chapter1",
-  "chapter2",
-  "news-analysis",
-  "contact",
-]
-
-  .map((id) => document.getElementById(id))
-  .filter(Boolean);
-
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
 
 const setHeaderState = () => {
   if (header) {
-    header.classList.toggle("is-scrolled", window.scrollY > 900);
+    header.classList.toggle("is-scrolled", !hero || window.scrollY > hero.offsetHeight - 72);
   }
 };
 
@@ -49,25 +36,6 @@ if (mobileNav) {
       }
     });
   });
-}
-
-// 네비게이션 활성화 스크롤 옵저버
-if ("IntersectionObserver" in window) {
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-        navLinks.forEach((link) => {
-          link.classList.toggle(
-            "is-active",
-            link.dataset.section === entry.target.id,
-          );
-        });
-      });
-    },
-    { rootMargin: "-35% 0px -50% 0px", threshold: 0 },
-  );
-  sections.forEach((section) => observer.observe(section));
 }
 
 const useHeroFallback = () => {
@@ -152,4 +120,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const children = Array.from(p.childNodes);
     children.forEach((child) => wrapTextNodes(child));
   });
+});
+
+// Keep the original word-lookup and reveal effects; navigation now uses real page URLs.
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && mobileNav && !mobileNav.hidden) {
+    mobileNav.hidden = true;
+    menuBtn.setAttribute("aria-expanded", "false");
+    menuBtn.setAttribute("aria-label", "Open menu");
+    menuBtn.focus();
+  }
 });
