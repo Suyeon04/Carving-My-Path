@@ -1,0 +1,137 @@
+/* Carving My Path — introduce styles */
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: var(--navy-deep);
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero.is-fallback .hero__video {
+  display: none;
+}
+
+.hero__veil {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(12, 22, 40, 0.45) 0%,
+      rgba(12, 22, 40, 0.72) 100%
+    ),
+    radial-gradient(
+      circle at 50% 30%,
+      rgba(196, 165, 116, 0.18),
+      transparent 45%
+    );
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--beige);
+  padding: 120px 22px 80px;
+  max-width: 860px;
+}
+
+.hero__kicker {
+  margin: 0 0 12px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--gold);
+}
+
+.hero__title {
+  margin: 0;
+  font-family: "Great Vibes", cursive;
+  font-size: clamp(56px, 10vw, 112px);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--cream);
+}
+
+.hero__sub {
+  margin: 18px auto 0;
+  max-width: 42ch;
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(243, 234, 217, 0.88);
+}
+
+.scrollHint {
+  display: inline-block;
+  margin-top: 36px;
+  color: var(--beige);
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 4px;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.contact {
+  text-align: center;
+}
+
+.contact__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact .section__lead {
+  text-align: center;
+}
+
+.contactCard {
+  width: min(520px, 100%);
+  display: grid;
+  gap: 12px;
+}
+
+.contactItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 20px;
+  background: var(--cream);
+  border: 1px solid rgba(21, 34, 56, 0.1);
+  text-decoration: none;
+  color: var(--navy);
+}
+
+.contactItem span {
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.contactItem:hover {
+  border-color: var(--navy);
+}

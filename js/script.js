@@ -74,22 +74,21 @@ if ("IntersectionObserver" in window) {
   });
 }
 
-// [핵심 추가] 글씨 위로 마우스를 올리면 단어가 커지는 효과 적용
-// [핵심 추가] 글씨 위로 마우스를 올리면 단어가 커지고, 클릭하면 네이버 사전으로 이동
 document.addEventListener("DOMContentLoaded", () => {
   const paragraphs = document.querySelectorAll(`
-    .storyText p,
-    #resume-letter p,
-    #resume-letter li,
-    #resume-letter h1,
-    #resume-letter h3,
-    #resume-letter h4,
-    #resume-letter .career-job > strong,
-    #resume-letter .career-job > span
-  `);
+  .storyText p,
+  #resume-letter p,
+  #resume-letter li,
+  #resume-letter h1,
+  #resume-letter h3,
+  #resume-letter h4,
+  #resume-letter .career-job > strong,
+  #resume-letter .career-job > span
+`);
 
   paragraphs.forEach((p) => {
     function wrapTextNodes(node) {
+      if (node.nodeType === 1 && node.matches("a, button, .hover-word")) return;
       if (node.nodeType === 3) {
         const text = node.nodeValue;
         if (text.trim() === "") return;
@@ -126,9 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
       } else if (node.nodeType === 1) {
         const children = Array.from(node.childNodes);
         children.forEach((child) => wrapTextNodes(child));
-      }
-      if (node.nodeType === 1 && node.matches("a, button, .hover-word")) {
-        return;
       }
     }
 
