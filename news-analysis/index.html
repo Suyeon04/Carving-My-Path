@@ -15,37 +15,7 @@
   </head>
   <body data-page="news">
     <a class="skip-link" href="#page-content">Skip to content</a>
-    <header class="header is-scrolled" id="header">
-      <div class="header__inner">
-        <a class="logo" href="introduce.html" aria-label="Layla, go to main"
-          >layla</a
-        >
-        <nav class="nav" aria-label="Primary">
-          <a href="introduce.html">Introduce</a>
-          <a href="news-analysis.html" class="is-active" aria-current="page"
-            >News Analysis</a
-          >
-          <a href="resume.html">Resume &amp; Cover Letter</a>
-        </nav>
-
-        <button
-          class="menuBtn"
-          id="menuBtn"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="mobileNav"
-        >
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <div class="mobileNav" id="mobileNav" hidden>
-        <a href="introduce.html">Introduce</a>
-        <a href="news-analysis.html" aria-current="page">News Analysis</a>
-        <a href="resume.html">Resume &amp; Cover Letter</a>
-      </div>
-    </header>
+    <site-header></site-header>
     <main id="page-content">
       <section class="section section--navy" id="news-analysis">
         <div class="container">
@@ -238,12 +208,10 @@
         </div>
       </section>
     </main>
-    <footer class="siteFooter">
-      <div class="container">
-        <span>© <span id="year"></span> Layla · Carving My Path</span
-        ><a href="introduce.html">Back to Introduce</a>
-      </div>
-    </footer>
-    <script src="../js/script.js"></script>
+
+    <site-footer></site-footer>
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+    <script src="../js/script.js" defer></script>
   </body>
 </html>

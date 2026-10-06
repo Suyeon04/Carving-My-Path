@@ -507,3 +507,9 @@ a {
     transform: none !important;
   }
 }
+
+/* Light-DOM shared components retain the existing page layout. */
+site-header,
+site-footer {
+  display: contents;
+}

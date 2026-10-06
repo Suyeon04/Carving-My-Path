@@ -15,37 +15,7 @@
   </head>
   <body data-page="resume">
     <a class="skip-link" href="#page-content">Skip to content</a>
-    <header class="header is-scrolled" id="header">
-      <div class="header__inner">
-        <a class="logo" href="introduce.html" aria-label="Layla, go to main"
-          >layla</a
-        >
-        <nav class="nav" aria-label="Primary">
-          <a href="introduce.html">Introduce</a>
-          <a href="news-analysis.html">News Analysis</a>
-          <a href="resume.html" class="is-active" aria-current="page"
-            >Resume &amp; Cover Letter</a
-          >
-        </nav>
-
-        <button
-          class="menuBtn"
-          id="menuBtn"
-          type="button"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="mobileNav"
-        >
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <div class="mobileNav" id="mobileNav" hidden>
-        <a href="introduce.html">Introduce</a>
-        <a href="news-analysis.html">News Analysis</a>
-        <a href="resume.html" aria-current="page">Resume &amp; Cover Letter</a>
-      </div>
-    </header>
+    <site-header></site-header>
     <main id="page-content">
       <section class="section" id="resume-letter">
         <div class="container">
@@ -101,10 +71,14 @@
                 development, and operation, and collaborated with
                 non-engineering teams to solve practical problems.
               </p>
-              <h4>Current Technical Skills</h4>
+              <h4>Technical Skills</h4>
               <p>
                 React · TypeScript · JavaScript · Next.js · HTML/CSS · React
                 Query · Context API · Storybook
+              </p>
+              <p class="career-future">
+                Kotlin · Jetpack Compose · Coroutines/Flow · Gradle · Android
+                testing · Performance profiling · Offline data handling
               </p>
               <h4>Experience</h4>
               <div class="career-job">
@@ -161,20 +135,39 @@
                 <strong>Mirim Meister High School</strong><br />Software
                 Department<br />Graduated February 2023
               </p>
-              <h4>Planned Qualifications</h4>
-              <p class="career-future">
-                Not yet attained: hands-on experience with Kotlin, Jetpack
-                Compose, Coroutines/Flow, and Gradle; building and releasing a
-                native Android app; Android performance profiling and offline
-                data handling.
-              </p>
+              <h4>Android Project Experience</h4>
+              <div class="career-future">
+                <strong
+                  >Native Android Note-taking App · Personal Project</strong
+                >
+                <ul>
+                  <li>
+                    Built and released a native Android note-taking app on
+                    Google Play using Kotlin and Jetpack Compose.
+                  </li>
+                  <li>
+                    Implemented note editing, search, and offline storage, using
+                    Coroutines/Flow for asynchronous data handling.
+                  </li>
+                  <li>
+                    Configured builds with Gradle and added automated tests for
+                    core user journeys.
+                  </li>
+                  <li>
+                    Profiled startup time, scrolling performance, and memory
+                    usage to identify and resolve performance issues.
+                  </li>
+                </ul>
+              </div>
               <p class="career-plan">
-                <strong>Development plan:</strong> Build a Kotlin/Compose
-                note-taking app with search and offline storage. Use
-                Coroutines/Flow for asynchronous work, add automated tests, and
-                measure startup time, scrolling performance, and memory use.
-                Publish the code on GitHub and release a tested version on
-                Google Play.
+                <strong
+                  >Assignment note — how I will obtain these
+                  qualifications:</strong
+                >
+                I will study Kotlin and Jetpack Compose, build a note-taking app
+                with offline storage, add tests, and practise performance
+                profiling. I will then publish the code on GitHub and release a
+                tested version on Google Play.
               </p>
             </article>
             <article class="career-card">
@@ -211,26 +204,30 @@
                 substitute for understanding, reviewing, and testing code.
               </p>
               <p class="career-future">
-                I have not yet built and released a native Android app or
-                developed practical proficiency in Kotlin, Jetpack Compose,
-                Coroutines/Flow, and Gradle. These are qualifications I plan to
-                obtain, not skills I currently claim to have.
+                I am proficient in Kotlin, Jetpack Compose, Coroutines/Flow, and
+                Gradle. I have built and released a native Android note-taking
+                app with editing, search, and offline storage. I added automated
+                tests and used performance profiling to improve startup,
+                scrolling, and memory usage. This experience equips me to
+                contribute to Notion’s core Android experience.
               </p>
               <p>
                 Thank you for considering my application. I would welcome the
-                opportunity to discuss my transferable experience and my
-                commitment to developing the Android-specific skills required
-                for this role.
+                opportunity to discuss how I could help your team deliver fast,
+                reliable, and thoughtful mobile experiences.
               </p>
               <p class="career-signature">
                 Sincerely,<br /><strong>Suyeon Park</strong>
               </p>
               <p class="career-plan">
-                <strong>Skills plan:</strong> Complete a native Android project
-                using Kotlin and Compose, implement offline storage and
-                automated tests, profile its performance, and release it on
-                Google Play. Document the implementation and results on GitHub
-                to demonstrate these qualifications.
+                <strong
+                  >Assignment note — how I will obtain the qualifications in
+                  red:</strong
+                >
+                I will complete a Kotlin/Compose Android project, implement
+                offline storage and automated tests, practise profiling, and
+                release the app on Google Play. I will document the code and
+                results on GitHub.
               </p>
             </article>
           </div>
@@ -273,12 +270,10 @@
         </div>
       </section>
     </main>
-    <footer class="siteFooter">
-      <div class="container">
-        <span>© <span id="year"></span> Layla · Carving My Path</span
-        ><a href="introduce.html">Back to Introduce</a>
-      </div>
-    </footer>
-    <script src="../js/script.js"></script>
+
+    <site-footer></site-footer>
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+    <script src="../js/script.js" defer></script>
   </body>
 </html>

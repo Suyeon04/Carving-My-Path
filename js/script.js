@@ -10,10 +10,7 @@ if (yearEl) {
 
 const setHeaderState = () => {
   if (header) {
-    header.classList.toggle(
-      "is-scrolled",
-      !hero || window.scrollY > hero.offsetHeight - 72,
-    );
+    header.classList.toggle("is-scrolled", !hero || window.scrollY > hero.offsetHeight - 72);
   }
 };
 
@@ -74,6 +71,8 @@ if ("IntersectionObserver" in window) {
   });
 }
 
+// [핵심 추가] 글씨 위로 마우스를 올리면 단어가 커지는 효과 적용
+// [핵심 추가] 글씨 위로 마우스를 올리면 단어가 커지고, 클릭하면 네이버 사전으로 이동
 document.addEventListener("DOMContentLoaded", () => {
   const paragraphs = document.querySelectorAll(`
   .storyText p,
