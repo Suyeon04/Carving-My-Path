@@ -10,7 +10,10 @@ if (yearEl) {
 
 const setHeaderState = () => {
   if (header) {
-    header.classList.toggle("is-scrolled", !hero || window.scrollY > hero.offsetHeight - 72);
+    header.classList.toggle(
+      "is-scrolled",
+      !hero || window.scrollY > hero.offsetHeight - 72,
+    );
   }
 };
 
@@ -78,9 +81,6 @@ document.addEventListener("DOMContentLoaded", () => {
   .storyText p,
   #resume-letter p,
   #resume-letter li,
-  #resume-letter h1,
-  #resume-letter h3,
-  #resume-letter h4,
   #resume-letter .career-job > strong,
   #resume-letter .career-job > span
 `);
