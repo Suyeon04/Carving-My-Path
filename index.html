@@ -1,6 +1,20 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // 예전 한 페이지 주소(#섹션)로 들어온 사용자를 새 페이지로 이동
+      (() => {
+        const oldRoutes = {
+          "#news-analysis": "news-analysis/",
+        };
+        const target = oldRoutes[location.hash];
+        if (target) {
+          const base =
+            location.protocol === "file:" ? target + "index.html" : target;
+          location.replace(new URL(base, location.href.split("#")[0]));
+        }
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carving My Path — Layla</title>
@@ -11,7 +25,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/common.css" />
-    <link rel="stylesheet" href="css/introduce.css" />
+    <link rel="stylesheet" href="introduce.css" />
   </head>
   <body data-page="introduce">
     <a class="skip-link" href="#page-content">Skip to content</a>
