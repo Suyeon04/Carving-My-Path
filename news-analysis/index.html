@@ -1,6 +1,17 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      // /resume -> /resume/ 로 보정 (CSS·JS 경로 깨짐 방지)
+      if (
+        location.protocol !== "file:" &&
+        !/\/$|\.html$/.test(location.pathname)
+      ) {
+        location.replace(
+          location.pathname + "/" + location.search + location.hash,
+        );
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Analysis — Carving My Path</title>
