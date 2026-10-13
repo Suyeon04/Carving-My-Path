@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <script>
-      // /resume -> /resume/ 로 보정 (CSS·JS 경로 깨짐 방지)
       if (
         location.protocol !== "file:" &&
         !/\/$|\.html$/.test(location.pathname)
@@ -218,11 +217,14 @@
           </blockquote>
         </div>
       </section>
+      <site-comments page="News Analysis"></site-comments>
     </main>
 
     <site-footer></site-footer>
     <script src="../components/header.js" defer></script>
     <script src="../components/footer.js" defer></script>
+    <script src="../components/comments-data.js" defer></script>
+    <script src="../components/comments.js" defer></script>
     <script src="../js/script.js" defer></script>
   </body>
 </html>

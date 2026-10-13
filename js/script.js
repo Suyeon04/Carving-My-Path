@@ -82,7 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
   #resume-letter p,
   #resume-letter li,
   #resume-letter .career-job > strong,
-  #resume-letter .career-job > span
+  #resume-letter .career-job > span,
+  #movie-plot li,
+  #plot .beat p,
+  #plot .beat li
 `);
 
   paragraphs.forEach((p) => {

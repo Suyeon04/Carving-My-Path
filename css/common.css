@@ -426,11 +426,14 @@ a {
 }
 
 .siteFooter {
-  border-top: 1px solid rgba(21, 34, 56, 0.15);
   padding: 24px 0;
-  background: var(--beige);
-  color: var(--navy);
+  background: var(--navy-deep);
+  color: var(--beige);
   font-size: 14px;
+}
+
+.siteFooter a {
+  color: var(--gold);
 }
 
 .siteFooter > .container {
@@ -509,4 +512,41 @@ a {
 site-header,
 site-footer {
   display: contents;
+}
+
+/* Classmates' comments (components/comments.js) */
+.comments {
+  padding: 64px 0;
+  border-top: 1px solid rgba(21, 34, 56, 0.15);
+}
+.commentBtn {
+  display: inline-block;
+  margin: 8px 0 24px;
+  padding: 12px 22px;
+  background: var(--navy);
+  color: var(--cream);
+  text-decoration: none;
+  border-radius: 4px;
+}
+.commentList {
+  display: grid;
+  gap: 14px;
+}
+.commentCard {
+  background: var(--cream);
+  border-left: 3px solid var(--gold);
+  padding: 16px 20px;
+  border-radius: 4px;
+}
+.commentCard p {
+  margin: 0 0 6px;
+  font-style: italic;
+}
+.commentCard span {
+  font-size: 13px;
+  color: #606878;
+}
+.commentEmpty {
+  color: #606878;
+  font-style: italic;
 }

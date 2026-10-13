@@ -1,0 +1,155 @@
+/* Carving My Path — movie plot styles */
+
+body[data-page="movie"] #movie-plot {
+  padding-top: 128px;
+}
+
+/* Intro: small poster + characters */
+.movieIntro {
+  display: flex;
+  align-items: center; /* 포스터와 오른쪽 글 세로 가운데 정렬 */
+  gap: 48px;
+  margin-top: 32px;
+}
+.moviePoster {
+  flex: 0 0 220px;
+  width: 220px;
+  margin: 0;
+  transform: rotate(-2deg);
+}
+.characters {
+  flex: 1;
+  min-width: 0;
+}
+.moviePoster img {
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+}
+
+.characters h3 {
+  margin: 0 0 18px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 28px;
+  color: var(--gold);
+}
+.characters ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+.characters li {
+  padding: 16px 20px;
+  background: var(--navy-deep);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  line-height: 1.65;
+  color: var(--beige);
+}
+.characters strong {
+  color: var(--gold);
+  font-size: 17px;
+}
+
+/* Acts */
+.acts {
+  display: grid;
+  gap: 40px;
+}
+.act {
+  background: var(--cream);
+  border: 1px solid rgba(21, 34, 56, 0.12);
+  border-top: 3px solid var(--gold);
+  border-radius: 4px;
+  padding: 36px 40px;
+  box-shadow: 0 10px 28px rgba(21, 34, 56, 0.08);
+}
+.act__head {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 24px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(21, 34, 56, 0.12);
+}
+.act__num {
+  font-size: 13px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #765936;
+}
+.act__head h2 {
+  margin: 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 34px;
+  font-style: italic;
+  color: var(--navy);
+}
+
+.beat + .beat {
+  margin-top: 26px;
+}
+.beat__label {
+  display: inline-block;
+  margin: 0 0 10px !important;
+  padding: 3px 10px;
+  font-size: 13px !important;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  background: var(--beige-2);
+  border-radius: 3px;
+}
+.beat p {
+  margin: 0 0 12px;
+  line-height: 1.75;
+}
+.beat ol {
+  margin: 0;
+  padding-left: 22px;
+  line-height: 1.75;
+}
+
+/* Dialogue lines — script style */
+.beat .line {
+  margin: 6px 0 6px 18px;
+  padding-left: 14px;
+  border-left: 2px solid var(--gold);
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  color: var(--navy-soft);
+}
+
+.centralQ {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 24px;
+  font-style: italic;
+  color: var(--navy);
+}
+
+@media (max-width: 860px) {
+  body[data-page="movie"] #movie-plot {
+    padding-top: 112px;
+  }
+  .movieIntro {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .moviePoster {
+    flex-basis: auto;
+    width: 170px;
+    margin: 0 auto;
+  }
+  .act {
+    padding: 26px 22px;
+  }
+  .act__head h2 {
+    font-size: 28px;
+  }
+}
+.act--reflection {
+  background: var(--beige-2);
+  border-top-color: var(--navy);
+}

@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // /movie-plot -> /movie-plot/ 로 보정 (CSS·JS 경로 깨짐 방지)
+      if (
+        location.protocol !== "file:" &&
+        !/\/$|\.html$/.test(location.pathname)
+      ) {
+        location.replace(
+          location.pathname + "/" + location.search + location.hash,
+        );
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Plot — Carving My Path</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="movie-plot.css" />
+  </head>
+  <body data-page="movie">
+    <a class="skip-link" href="#page-content">Skip to content</a>
+    <site-header></site-header>
+    <main id="page-content">
+      <section class="section section--navy" id="movie-plot">
+        <div class="container">
+          <p class="chapterLabel">Media English Assignment · Movie Plot</p>
+          <h1 class="section__title">Fake It Until We Fall</h1>
+
+          <div class="movieIntro">
+            <figure class="polaroid moviePoster">
+              <img
+                src="../assets/img/movie-poster.png"
+                alt="Fake It Until We Fall movie poster"
+              />
+              <figcaption>Official poster</figcaption>
+            </figure>
+
+            <div class="characters">
+              <h3>Character Description</h3>
+              <ul>
+                <li>
+                  <strong>Emma</strong> is bright, energetic, expressive, and
+                  naturally outgoing. She tends to act on her feelings without
+                  thinking too much and has a habit of getting overly excited
+                  about the things she likes. She is friendly and affectionate,
+                  but she can also be stubborn and easily embarrassed when her
+                  feelings are hurt.
+                </li>
+                <li>
+                  <strong>Jack</strong> is quiet, reserved, blunt, and easily
+                  irritated. He doesn't like unnecessary attention and prefers
+                  to keep his thoughts and feelings to himself. He can come
+                  across as cold and arrogant because he rarely considers how
+                  his words affect other people. Despite his harsh exterior,
+                  Jack is observant and secretly considerate. Once he becomes
+                  attached to someone, he tends to care about them more than he
+                  is willing to admit.
+                </li>
+                <li>
+                  <strong>Wesley</strong> is kind, gentle, polite, and popular
+                  among everyone. As the talented basketball team member, he
+                  naturally attracts attention but remains humble. He values his
+                  deep friendship with Jack and cares for those around him,
+                  though he can be a bit late in recognizing his own romantic
+                  feelings.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="plot">
+        <div class="container acts">
+          <article class="act">
+            <header class="act__head">
+              <span class="act__num">Act 1</span>
+              <h2>Set up</h2>
+            </header>
+            <div class="beat">
+              <p class="beat__label">[Action scene]</p>
+              <p>
+                The final seconds of a high school basketball game. The score is
+                tied. Wesley drives toward the basket while Jack blocks a
+                defender for him. Wesley scores at the buzzer, and the gym
+                explodes. Louder than anyone, Emma jumps up in the stands,
+                waving a homemade banner: "GO WESLEY!!" On the court, Jack
+                glances up at her and frowns.
+              </p>
+              <p class="line">Jack: "Is she always this loud?"</p>
+              <p class="line">Wesley (laughing): "She comes to every game."</p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Genre / Location / Main characters]</p>
+              <p>
+                This is a romance set in a high school. Emma is an outgoing,
+                cheerful student who has had a crush on Wesley for a long time.
+                Jack and Wesley have been childhood friends since they were very
+                young, and their families are close too. All three are members
+                of the school basketball team. Whenever Wesley has a game, at
+                school or anywhere else, Emma makes sure to be there cheering
+                him on.
+              </p>
+              <p>
+                Jack is cold and composed on the outside but warm-hearted deep
+                down. When he first saw Emma, he thought, ‘She's a little
+                annoying.’ Her nonstop, over-the-top cheering at every game
+                bothered him, and he couldn't imagine ever getting along with a
+                girl like her.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Problem]</p>
+              <p>
+                Lots of girls like Wesley because he is kind and gentle. Emma
+                believes Wesley might like her back, since she has supported him
+                for so long, but she knows she needs a little push to move their
+                relationship forward.
+              </p>
+              <p>
+                Then, out of nowhere, a senior one year above Jack confesses
+                that she likes him. She is also Wesley's first love. Jack has no
+                feelings for her, and out of loyalty to Wesley he can't accept.
+                But she refuses to give up.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Goal]</p>
+              <p>
+                Emma's goal is to make Wesley jealous so he will finally notice
+                her, while Jack's goal is to get the senior to stop chasing him.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Turning Point]</p>
+              <p>After practice, Emma stops Jack in the empty gym.</p>
+              <p class="line">
+                Emma: "Pretend to be my boyfriend. Just until Wesley notices
+                me."
+              </p>
+              <p class="line">Jack: "Why would I do that?"</p>
+              <p class="line">
+                Emma: "Because that senior won't leave you alone, right? We both
+                win."
+              </p>
+              <p>
+                Jack hesitates, but with no other way out, he accepts. Their
+                fake relationship begins.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Central Question]</p>
+              <p class="centralQ">
+                Will Emma win Wesley's heart, or will this pretend relationship
+                start to feel a little too real?
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Subplots]</p>
+              <ol>
+                <li>The senior keeps chasing Jack.</li>
+                <li>
+                  Jack and Wesley's friendship, and Jack's loyalty to Wesley
+                  (the senior is Wesley's first love).
+                </li>
+                <li>
+                  Wesley's slowly growing curiosity and feelings for Emma.
+                </li>
+              </ol>
+            </div>
+          </article>
+          <article class="act">
+            <header class="act__head">
+              <span class="act__num">Act 2</span>
+              <h2>Development</h2>
+            </header>
+            <div class="beat">
+              <p class="beat__label">[Barrier]</p>
+              <p>
+                Emma and Jack start their fake relationship, but their
+                personalities clash and they bicker constantly.
+              </p>
+              <p class="line">
+                Emma: "Can you at least pretend to care when we are together?"
+              </p>
+              <p class="line">
+                Jack: "I am pretending. This is my absolute best."
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Action point]</p>
+              <p>
+                Even so, Jack decides to pick out a small birthday present for
+                Emma. While looking for something she might like, he realizes he
+                has grown quite fond of her. He chooses a silver bracelet with a
+                tiny basketball charm.
+              </p>
+              <p>
+                On Emma's birthday, they go on a small date. Wesley also comes
+                by to wish Emma a happy birthday, but he sees Emma and Jack
+                looking comfortable and happy together.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Complication]</p>
+              <p>
+                Wesley gets a strange feeling of jealousy and starts paying more
+                attention to Emma. Emma thinks her plan is working wonderfully.
+              </p>
+              <p>
+                One day, the senior tells Emma to step away from Jack. Jack
+                finds Emma looking quiet and down in the gym and checks on her.
+                When he learns the senior is the reason, he warns the senior
+                firmly.
+              </p>
+              <p class="line">Jack: "Stay away from her. I mean it."</p>
+              <p>
+                After that, the senior stops bothering them. Emma realizes that
+                her heart flutters around Jack now, and the two grow much
+                closer.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Reversal]</p>
+              <p>
+                Meanwhile, Wesley realizes his feelings for Emma have changed
+                and decides to confess. But before he can, he accidentally finds
+                out that Emma and Jack's relationship started out fake. Wesley
+                confronts Jack.
+              </p>
+              <p class="line">Wesley: "Is it true? Was it all pretend?"</p>
+              <p class="line">
+                Jack: "...It was my idea. I needed a way to keep the senior
+                away."
+              </p>
+              <p>
+                Jack takes the blame to protect Emma. Wesley is also hurt to
+                learn that Jack kept secrets from him. Wesley tells Jack he
+                should step back from Emma.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Barrier]</p>
+              <p>
+                Jack has no excuse, so he suggests they stop the fake
+                relationship. Although Emma and Jack are sad to let go, they
+                hide their true feelings because they think they should return
+                to their original places. Jack knows Emma used to like Wesley,
+                so he keeps his growing feelings to himself, hoping she can be
+                happy with Wesley.
+              </p>
+            </div>
+          </article>
+          <article class="act">
+            <header class="act__head">
+              <span class="act__num">Act 3</span>
+              <h2>Resolution</h2>
+            </header>
+            <div class="beat">
+              <p>
+                After they stop, Wesley confesses his feelings to Emma, and she
+                accepts. It is what she thought she wanted for so long, so she
+                tries to smile and be happy.
+              </p>
+              <p>
+                Jack keeps his promise to himself. He still cares for Emma
+                deeply, so he quietly supports her relationship with Wesley. He
+                even mentions to Wesley what kind of snacks Emma likes and
+                reminds him to take good care of her. Every day after practice,
+                Jack stays alone in the gym shooting baskets to clear his head.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">
+                [Foreshadowing – character traits / objects]
+              </p>
+              <p>
+                But Emma can't quite forget Jack. Wesley is sweet and gentle,
+                yet her mind keeps drifting back to Jack's blunt remarks, their
+                playful bickering, and the silver bracelet he gave her, which
+                she still wears. At games, her eyes naturally wander toward Jack
+                instead of Wesley.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Foreshadowing – actions / knowledge]</p>
+              <p>
+                One rainy afternoon, Emma realizes she has forgotten her
+                umbrella. At her locker, she finds one hanging there. It's
+                Jack's.
+              </p>
+              <p>
+                She hears from a teammate that Jack walked to the gym in the
+                rain without it. Standing by her locker, a sudden realization
+                hits her as she remembers how accurately Jack always seemed to
+                notice the little things about her—even things she never told
+                him directly.
+              </p>
+              <p>
+                Emma leaves the umbrella behind, her heart racing, and runs to
+                the gym through the soft pouring rain.
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">
+                [Climax – answer to the Central Question]
+              </p>
+              <p>
+                She bursts into the gym, damp and out of breath. Jack is
+                shooting baskets alone.
+              </p>
+              <p class="line">Jack: "Why aren't you using the umbrella?"</p>
+              <p>
+                Without answering, Emma lets out all the thoughts she has been
+                holding in.
+              </p>
+              <p class="line">
+                Emma: "I can't stop thinking about you. Even when we bickered,
+                my eyes kept going to you, and I..."
+              </p>
+              <p>
+                Before she can finish, Jack steps closer and pulls her into a
+                soft, unexpected kiss.
+              </p>
+              <p class="line">Jack (quietly): "You really talk too much."</p>
+              <p class="line">
+                Jack: "...But you've been on my mind for a long time, too."
+              </p>
+            </div>
+            <div class="beat">
+              <p class="beat__label">[Foreshadowing payoff – opening scene]</p>
+              <p>
+                At the next game, Emma cheers brightly from the stands, just
+                like before. But this time, she calls Jack's name. Jack, who
+                once found her cheering noisy, looks up at her and gives a
+                small, fond smile.
+              </p>
+            </div>
+          </article>
+          <article class="act act--reflection">
+            <header class="act__head">
+              <span class="act__num">My Thoughts</span>
+              <h2>Reflection</h2>
+            </header>
+            <div class="beat">
+              <p>
+                This was my first time writing a script, so it was quite
+                difficult at first. I had to think carefully about how each
+                scene would flow and how the characters would speak. Until now,
+                I had mostly done assignments on my own, but this time we
+                created the story as a group. Sharing ideas and deciding on the
+                plot together made the process much more fun, and discussing
+                everything in English helped me improve my English as well.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <site-comments page="Movie Plot"></site-comments>
+    </main>
+
+    <site-footer></site-footer>
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+    <script src="../components/comments-data.js" defer></script>
+    <script src="../components/comments.js" defer></script>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

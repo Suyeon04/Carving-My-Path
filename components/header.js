@@ -16,6 +16,7 @@
         { key: "introduce", path: "", label: "Introduce" },
         { key: "news", path: "news-analysis/", label: "News Analysis" },
         { key: "resume", path: "resume/", label: "Resume &amp; Cover Letter" },
+        { key: "movie", path: "movie-plot/", label: "Movie Plot" },
       ];
       const links = (mobile = false) =>
         routes
