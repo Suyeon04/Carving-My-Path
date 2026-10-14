@@ -9,9 +9,9 @@ window.COMMENTS = {
     // { name: "Jiwoo", text: "I liked the red highlighted skills." },
   ],
   "Movie Plot": [
-    // { name: "Yuna", text: "The umbrella scene was so sweet!" },
+    { name: "muskan", text: "the plot was intruiging from start to finish!" },
   ],
-  "Introduce": [
+  Introduce: [
     // { name: "Yuna", text: "The umbrella scene was so sweet!" },
   ],
 };
