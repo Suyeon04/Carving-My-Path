@@ -11,6 +11,9 @@ window.COMMENTS = {
   "Movie Plot": [
     { name: "muskan", text: "the plot was intruiging from start to finish!" },
   ],
+  Article: [
+    // { name: "Yuna", text: "The layout looks like a real magazine!" },
+  ],
   Introduce: [
     // { name: "Yuna", text: "The umbrella scene was so sweet!" },
   ],

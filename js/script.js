@@ -85,7 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
   #resume-letter .career-job > span,
   #movie-plot li,
   #plot .beat p,
-  #plot .beat li
+  #plot .beat li,
+  #article-info .mastCard > p:not(.mastCard__label),
+  #article-info dd,
+  #article-reflection .reflectionNote > p:not(.mastCard__label)
 `);
 
   paragraphs.forEach((p) => {
