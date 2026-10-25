@@ -361,41 +361,20 @@ a {
   }
 }
 
-.hover-word {
-  display: inline-block;
-  transition:
-    transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    color 0.2s ease,
-    filter 0.3s ease,
-    opacity 0.3s ease;
+.hover-sentence {
   cursor: pointer;
+  border-radius: 3px;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-.hover-word:hover {
-  transform: scale(1.15) translateY(-2px);
-  color: var(--gold);
-  z-index: 10;
-  position: relative;
-}
-
-.hover-word:has(+ .hover-word:hover) {
-  filter: blur(2.5px);
-  opacity: 0.9;
-}
-
-.hover-word:has(+ .hover-word + .hover-word:hover) {
-  filter: blur(1px);
-  opacity: 1.2;
-}
-
-.hover-word:hover + .hover-word {
-  filter: blur(2.5px);
-  opacity: 0.9;
-}
-
-.hover-word:hover + .hover-word + .hover-word {
-  filter: blur(1px);
-  opacity: 1.2;
+/* 마우스를 올린 문장 전체를 은은하게 강조 */
+.hover-sentence.is-active {
+  background-color: rgba(196, 165, 116, 0.28);
+  box-shadow: 0 0 0 2px rgba(196, 165, 116, 0.28);
 }
 
 @media (min-width: 861px) {
