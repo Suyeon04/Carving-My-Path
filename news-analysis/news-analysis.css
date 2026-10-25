@@ -384,20 +384,36 @@ body[data-page="news"] #news-analysis {
 #news-analysis .analysisCard--highlight {
   color: var(--navy-deep);
   background:
-    radial-gradient(circle at 100% 0%, rgba(255, 250, 242, 0.55), transparent 50%),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 250, 242, 0.55),
+      transparent 50%
+    ),
     linear-gradient(135deg, #e2c58f 0%, var(--gold) 100%);
   border: 2px solid #f1dcae;
-  box-shadow: 0 0 0 6px rgba(196, 165, 116, 0.18), 0 18px 40px rgba(0, 0, 0, 0.35);
+  box-shadow:
+    0 0 0 6px rgba(196, 165, 116, 0.18),
+    0 18px 40px rgba(0, 0, 0, 0.35);
 }
 #news-analysis .analysisCard--highlight:hover {
   background:
-    radial-gradient(circle at 100% 0%, rgba(255, 250, 242, 0.7), transparent 55%),
+    radial-gradient(
+      circle at 100% 0%,
+      rgba(255, 250, 242, 0.7),
+      transparent 55%
+    ),
     linear-gradient(135deg, #ecd3a3 0%, #cfb07c 100%);
   border-color: var(--cream);
 }
-#news-analysis .analysisCard--highlight h3 { color: var(--navy-deep); }
-#news-analysis .analysisCard--highlight p:not(.analysisCard__number) { color: var(--navy); }
-#news-analysis .analysisCard--highlight .analysisCard__number { color: var(--navy-deep); }
+#news-analysis .analysisCard--highlight h3 {
+  color: var(--navy-deep);
+}
+#news-analysis .analysisCard--highlight p:not(.analysisCard__number) {
+  color: var(--navy);
+}
+#news-analysis .analysisCard--highlight .analysisCard__number {
+  color: var(--navy-deep);
+}
 #news-analysis .analysisCard--highlight .analysisCard__number::after {
   content: "Key question";
   margin-left: 10px;
@@ -417,9 +433,10 @@ body[data-page="news"] #news-analysis {
 }
 
 /* Reflection */
-#news-reflection { padding: 72px 0 24px; }
+#news-reflection {
+  padding: 72px 0 24px;
+}
 .newsReflection {
-  max-width: 820px;
   padding: 36px 40px;
   background: var(--cream);
   border-left: 5px solid var(--gold);
@@ -433,7 +450,12 @@ body[data-page="news"] #news-analysis {
   font-style: italic;
   color: var(--navy);
 }
-.newsReflection > p:last-child { margin: 0; line-height: 1.8; }
+.newsReflection > p:last-child {
+  margin: 0;
+  line-height: 1.8;
+}
 @media (max-width: 860px) {
-  .newsReflection { padding: 26px 22px; }
+  .newsReflection {
+    padding: 26px 22px;
+  }
 }
