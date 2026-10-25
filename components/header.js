@@ -18,6 +18,7 @@
         { key: "resume", path: "resume/", label: "Resume &amp; Cover Letter" },
         { key: "movie", path: "movie-plot/", label: "Movie Plot" },
         { key: "article", path: "article/", label: "Article" },
+        { key: "changes", path: "changes-made/", label: "Changes Made" },
       ];
       const links = (mobile = false) =>
         routes

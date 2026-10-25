@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // /changes-made -> /changes-made/ 로 보정 (CSS·JS 경로 깨짐 방지)
+      if (
+        location.protocol !== "file:" &&
+        !/\/$|\.html$/.test(location.pathname)
+      ) {
+        location.replace(
+          location.pathname + "/" + location.search + location.hash,
+        );
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Changes Made — Carving My Path</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="changes-made.css" />
+  </head>
+  <body data-page="changes">
+    <a class="skip-link" href="#page-content">Skip to content</a>
+    <site-header></site-header>
+    <main id="page-content">
+      <section class="section section--navy" id="changes-intro">
+        <div class="container">
+          <p class="chapterLabel">Mid-term Project</p>
+          <h1 class="section__title">Changes Made</h1>
+          <p class="section__lead">
+            Five improvements I made to my portfolio based on my classmates’
+            feedback. Each change includes the comment, a description, and
+            before-and-after snapshots.
+          </p>
+          <ol class="changeToc">
+            <li>
+              <a href="#change-01"
+                ><span>01</span>Making “Real or fake?” stand out<em
+                  >News Analysis</em
+                ></a
+              >
+            </li>
+            <li>
+              <a href="#change-02"
+                ><span>02</span>A bigger movie poster<em>Movie Plot</em></a
+              >
+            </li>
+            <li>
+              <a href="#change-03"
+                ><span>03</span>A real magazine spread<em>Article</em></a
+              >
+            </li>
+            <li>
+              <a href="#change-04"
+                ><span>04</span>Zoom in to read the text<em>Article</em></a
+              >
+            </li>
+            <li>
+              <a href="#change-05"
+                ><span>05</span>Separating Reflection and AI Acknowledgement<em
+                  >Resume &amp; Cover Letter</em
+                ></a
+              >
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="changes-list">
+        <div class="container changeList">
+          <article class="changeCard" id="change-01">
+            <header class="changeCard__head">
+              <span class="changeCard__num">01</span>
+              <div>
+                <a class="changeCard__page" href="../news-analysis/"
+                  >News Analysis ↗</a
+                >
+                <h2>Making “Real or fake?” stand out</h2>
+              </div>
+            </header>
+            <div class="changeCard__body">
+              <blockquote class="changeCard__feedback">
+                <p>
+                  “I understand that the “Real or Fake” section has a different
+                  color because it is important. However, it blends in with the
+                  background, so it doesn't stand out enough. I think using a
+                  more eye-catching color would make it better.”
+                </p>
+                <cite>— Chae Young Kim, classmate</cite>
+              </blockquote>
+              <div class="changeCard__text">
+                <p>
+                  The “Real or fake?” card is the most important conclusion of
+                  my review, but it used a navy color that was almost the same
+                  as the background. I changed it to a bright gold gradient with
+                  dark navy text, added a glowing border, and placed a small
+                  “Key question” label next to the number.
+                </p>
+                <p>
+                  Now the card is the first thing readers notice in the analysis
+                  section.
+                </p>
+              </div>
+            </div>
+            <div class="beforeAfter">
+              <figure>
+                <span class="tag tag--before">Before</span>
+                <a
+                  href="../assets/img/changes/news-before.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/news-before.jpg"
+                    alt="Making “Real or fake?” stand out — before"
+                    loading="lazy"
+                /></a>
+              </figure>
+              <figure>
+                <span class="tag tag--after">After</span>
+                <a
+                  href="../assets/img/changes/news-after.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/news-after.jpg"
+                    alt="Making “Real or fake?” stand out — after"
+                    loading="lazy"
+                /></a>
+              </figure>
+            </div>
+          </article>
+          <article class="changeCard" id="change-02">
+            <header class="changeCard__head">
+              <span class="changeCard__num">02</span>
+              <div>
+                <a class="changeCard__page" href="../movie-plot/"
+                  >Movie Plot ↗</a
+                >
+                <h2>A bigger movie poster</h2>
+              </div>
+            </header>
+            <div class="changeCard__body">
+              <blockquote class="changeCard__feedback">
+                <p>
+                  “The movie poster looks really good, but it is a bit too
+                  small. I think it would look better if it were bigger.”
+                </p>
+                <cite>— Chae Young Kim, classmate</cite>
+              </blockquote>
+              <div class="changeCard__text">
+                <p>
+                  I enlarged the poster from 220px to 320px wide, which is about
+                  45% bigger. On mobile, it grew from 170px to 240px.
+                </p>
+                <p>
+                  The title, cast, and photos on the poster are now much easier
+                  to see, and the poster balances better with the character
+                  descriptions.
+                </p>
+              </div>
+            </div>
+            <div class="beforeAfter">
+              <figure>
+                <span class="tag tag--before">Before</span>
+                <a
+                  href="../assets/img/changes/movie-before.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/movie-before.jpg"
+                    alt="A bigger movie poster — before"
+                    loading="lazy"
+                /></a>
+              </figure>
+              <figure>
+                <span class="tag tag--after">After</span>
+                <a
+                  href="../assets/img/changes/movie-after.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/movie-after.jpg"
+                    alt="A bigger movie poster — after"
+                    loading="lazy"
+                /></a>
+              </figure>
+            </div>
+          </article>
+          <article class="changeCard" id="change-03">
+            <header class="changeCard__head">
+              <span class="changeCard__num">03</span>
+              <div>
+                <a class="changeCard__page" href="../article/">Article ↗</a>
+                <h2>A real magazine spread</h2>
+              </div>
+            </header>
+            <div class="changeCard__body">
+              <blockquote class="changeCard__feedback">
+                <p>
+                  “It would be nice to have the two pages arranged side by side
+                  horizontally so that the article looks like a real magazine.”
+                </p>
+                <cite>— Chae Young Kim, classmate</cite>
+              </blockquote>
+              <div class="changeCard__text">
+                <p>
+                  Before, the two article pages were stacked vertically, so
+                  readers had to scroll a long way. I arranged them side by side
+                  as an open magazine spread, with a soft shadow in the middle
+                  that looks like the fold of a real magazine.
+                </p>
+                <p>
+                  On phones, the pages still appear one after another so they
+                  stay easy to read.
+                </p>
+              </div>
+            </div>
+            <div class="beforeAfter">
+              <figure>
+                <span class="tag tag--before">Before</span>
+                <a
+                  href="../assets/img/changes/article-before.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/article-before.jpg"
+                    alt="A real magazine spread — before"
+                    loading="lazy"
+                /></a>
+              </figure>
+              <figure>
+                <span class="tag tag--after">After</span>
+                <a
+                  href="../assets/img/changes/article-after.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/article-after.jpg"
+                    alt="A real magazine spread — after"
+                    loading="lazy"
+                /></a>
+              </figure>
+            </div>
+          </article>
+          <article class="changeCard" id="change-04">
+            <header class="changeCard__head">
+              <span class="changeCard__num">04</span>
+              <div>
+                <a class="changeCard__page" href="../article/">Article ↗</a>
+                <h2>Zoom in to read the text</h2>
+              </div>
+            </header>
+            <div class="changeCard__body">
+              <blockquote class="changeCard__feedback">
+                <p>
+                  “It would also be helpful to let readers zoom in to read the
+                  text more easily.”
+                </p>
+                <cite>— Chae Young Kim, classmate</cite>
+              </blockquote>
+              <div class="changeCard__text">
+                <p>
+                  Before, clicking a page simply opened the image file in a new
+                  tab. I built a zoom viewer inside the website: readers can
+                  click a page, zoom from 100% to 300%, drag to move around,
+                  switch pages with the arrows, and press Esc to close.
+                </p>
+                <p>
+                  Now the small text in the article can be read comfortably
+                  without leaving the page.
+                </p>
+              </div>
+            </div>
+            <div class="beforeAfter">
+              <figure>
+                <span class="tag tag--before">Before</span>
+                <a
+                  href="../assets/img/changes/zoom-before.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/zoom-before.jpg"
+                    alt="Zoom in to read the text — before"
+                    loading="lazy"
+                /></a>
+              </figure>
+              <figure>
+                <span class="tag tag--after">After</span>
+                <a
+                  href="../assets/img/changes/zoom-after.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/zoom-after.jpg"
+                    alt="Zoom in to read the text — after"
+                    loading="lazy"
+                /></a>
+              </figure>
+            </div>
+          </article>
+          <article class="changeCard" id="change-05">
+            <header class="changeCard__head">
+              <span class="changeCard__num">05</span>
+              <div>
+                <a class="changeCard__page" href="../resume/"
+                  >Resume &amp; Cover Letter ↗</a
+                >
+                <h2>Separating Reflection and AI Acknowledgement</h2>
+              </div>
+            </header>
+            <div class="changeCard__body">
+              <blockquote
+                class="changeCard__feedback changeCard__feedback--self"
+              >
+                <p>
+                  “I really like how the overall design uses calm and elegant
+                  colors… Overall, I think it is nearly perfect.”
+                </p>
+                <cite
+                  >— Chae Young Kim, classmate · Improved based on my own
+                  review</cite
+                >
+              </blockquote>
+              <div class="changeCard__text">
+                <p>
+                  My classmate said this page was nearly perfect, so I reviewed
+                  it myself. The Reflection and AI Acknowledgement used the same
+                  beige background as the rest of the page, so they looked like
+                  part of the cover letter.
+                </p>
+                <p>
+                  I placed each of them in its own navy card with gold headings.
+                  Now these two sections are clearly separated and easy to find.
+                </p>
+              </div>
+            </div>
+            <div class="beforeAfter">
+              <figure>
+                <span class="tag tag--before">Before</span>
+                <a
+                  href="../assets/img/changes/resume-before.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/resume-before.jpg"
+                    alt="Separating Reflection and AI Acknowledgement — before"
+                    loading="lazy"
+                /></a>
+              </figure>
+              <figure>
+                <span class="tag tag--after">After</span>
+                <a
+                  href="../assets/img/changes/resume-after.jpg"
+                  target="_blank"
+                  rel="noopener"
+                  ><img
+                    src="../assets/img/changes/resume-after.jpg"
+                    alt="Separating Reflection and AI Acknowledgement — after"
+                    loading="lazy"
+                /></a>
+              </figure>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <site-footer></site-footer>
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

@@ -86,6 +86,8 @@ document.addEventListener("DOMContentLoaded", () => {
   #movie-plot li,
   #plot .beat p,
   #plot .beat li,
+  .newsReflection > p:last-child,
+  .changeCard__text p,
   #article-info .mastCard > p:not(.mastCard__label),
   #article-info dd,
   #article-reflection .reflectionNote > p:not(.mastCard__label)

@@ -150,3 +150,28 @@ body[data-page="resume"] #resume-letter {
     padding-top: 112px;
   }
 }
+
+/* Change 5 — separate Reflection and AI Acknowledgement with navy cards */
+.career-notes {
+  display: grid;
+  gap: 20px;
+  border-top: 0;
+  padding-top: 0;
+}
+.career-notes article + article { margin-top: 0; }
+.career-notes article {
+  padding: 32px 36px;
+  color: var(--beige);
+  background: var(--navy);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 14px 32px rgba(21, 34, 56, 0.18);
+}
+.career-notes .ai-acknowledgement { background: var(--navy-deep); }
+#resume-letter .career-notes h3 { color: var(--gold); }
+#resume-letter .career-notes p { color: rgba(243, 234, 217, 0.9); }
+#resume-letter .career-notes p:last-child { margin-bottom: 0; }
+.career-notes strong { color: var(--cream); }
+@media (max-width: 860px) {
+  .career-notes article { padding: 24px 22px; }
+}

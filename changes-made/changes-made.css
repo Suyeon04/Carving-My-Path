@@ -1,0 +1,224 @@
+/* Carving My Path — Changes Made (before & after journal) */
+
+body[data-page="changes"] #changes-intro {
+  padding-top: 128px;
+  padding-bottom: 72px;
+}
+
+/* Table of contents */
+.changeToc {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.changeToc a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 18px 18px 16px;
+  color: var(--beige);
+  text-decoration: none;
+  background: var(--navy-deep);
+  border: 1px solid rgba(243, 234, 217, 0.12);
+  border-top: 3px solid var(--gold);
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.4;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease;
+}
+.changeToc a:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold);
+}
+.changeToc span {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--gold);
+}
+.changeToc em {
+  margin-top: auto;
+  font-size: 12px;
+  font-style: normal;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(243, 234, 217, 0.6);
+}
+
+/* Change cards */
+.changeList {
+  display: grid;
+  gap: 48px;
+}
+.changeCard {
+  scroll-margin-top: 96px;
+  padding: 36px 40px 40px;
+  background: var(--cream);
+  border: 1px solid rgba(21, 34, 56, 0.12);
+  border-radius: 4px;
+  box-shadow: 0 12px 30px rgba(21, 34, 56, 0.08);
+}
+.changeCard__head {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-bottom: 26px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(21, 34, 56, 0.12);
+}
+.changeCard__num {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--gold);
+  background: var(--navy);
+  border-radius: 50%;
+}
+.changeCard__page {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #765936;
+  text-decoration: none;
+}
+.changeCard__page:hover {
+  text-decoration: underline;
+}
+.changeCard__head h2 {
+  margin: 4px 0 0;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 32px;
+  font-style: italic;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+.changeCard__body {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+.changeCard__feedback {
+  margin: 0;
+  padding: 20px 22px;
+  background: var(--beige-2);
+  border-left: 4px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+}
+.changeCard__feedback p {
+  margin: 0 0 10px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 19px;
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--navy);
+}
+.changeCard__feedback cite {
+  font-size: 13px;
+  font-style: normal;
+  color: #606878;
+}
+.changeCard__feedback--self {
+  border-left-color: var(--navy);
+}
+.changeCard__text p {
+  margin: 0 0 12px;
+  line-height: 1.75;
+}
+.changeCard__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Before / After */
+.beforeAfter {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.beforeAfter figure {
+  position: relative;
+  margin: 0;
+}
+.beforeAfter a {
+  display: block;
+  cursor: zoom-in;
+}
+.beforeAfter img {
+  display: block;
+  width: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  object-position: top;
+  border: 1px solid rgba(21, 34, 56, 0.15);
+  border-radius: 4px;
+  box-shadow: 0 10px 24px rgba(21, 34, 56, 0.12);
+}
+.tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  padding: 5px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 999px;
+}
+.tag--before {
+  color: var(--navy);
+  background: var(--beige);
+  border: 1px solid rgba(21, 34, 56, 0.25);
+}
+.tag--after {
+  color: var(--navy-deep);
+  background: var(--gold);
+}
+
+@media (max-width: 1000px) {
+  .changeToc {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 860px) {
+  body[data-page="changes"] #changes-intro {
+    padding-top: 112px;
+  }
+  .changeCard {
+    padding: 26px 20px 28px;
+  }
+  .changeCard__head {
+    gap: 14px;
+  }
+  .changeCard__num {
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+  }
+  .changeCard__head h2 {
+    font-size: 26px;
+  }
+  .changeCard__body,
+  .beforeAfter {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 520px) {
+  .changeToc {
+    grid-template-columns: 1fr;
+  }
+}

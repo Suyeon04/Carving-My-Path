@@ -550,3 +550,9 @@ site-footer {
   color: #606878;
   font-style: italic;
 }
+
+/* Six menu items: tighten spacing on mid-size screens */
+@media (min-width: 861px) and (max-width: 1120px) {
+  .nav { gap: 16px; }
+  .nav a { font-size: 12.5px; letter-spacing: 0.02em; }
+}
