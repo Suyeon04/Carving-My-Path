@@ -1,6 +1,4 @@
 const header = document.getElementById("header");
-const menuBtn = document.getElementById("menuBtn");
-const mobileNav = document.getElementById("mobileNav");
 const hero = document.getElementById("main");
 const heroVideo = document.getElementById("heroVideo");
 const yearEl = document.getElementById("year");
@@ -19,27 +17,6 @@ const setHeaderState = () => {
 
 setHeaderState();
 window.addEventListener("scroll", setHeaderState, { passive: true });
-
-if (menuBtn) {
-  menuBtn.addEventListener("click", () => {
-    const isOpen = menuBtn.getAttribute("aria-expanded") === "true";
-    menuBtn.setAttribute("aria-expanded", String(!isOpen));
-    menuBtn.setAttribute("aria-label", isOpen ? "Open menu" : "Close menu");
-    if (mobileNav) mobileNav.hidden = isOpen;
-  });
-}
-
-if (mobileNav) {
-  mobileNav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      if (mobileNav) mobileNav.hidden = true;
-      if (menuBtn) {
-        menuBtn.setAttribute("aria-expanded", "false");
-        menuBtn.setAttribute("aria-label", "Open menu");
-      }
-    });
-  });
-}
 
 const useHeroFallback = () => {
   if (hero) hero.classList.add("is-fallback");
@@ -92,7 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
   .changeCard__text p,
   #article-info .mastCard > p:not(.mastCard__label),
   #article-info dd,
-  #article-reflection .reflectionNote > p:not(.mastCard__label)
+  #article-reflection .reflectionNote > p:not(.mastCard__label),
+  .reviewIntro,
+  .reviewReflection > p:last-child
 `);
   const SENTENCE = /[^.!?]+(?:[.!?]+["”’')\]]*)?\s*|[.!?]+\s*/g;
   const ENDS = /[.!?]["”’')\]]*\s*$/;
@@ -177,12 +156,3 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Keep the original word-lookup and reveal effects; navigation now uses real page URLs.
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape" && mobileNav && !mobileNav.hidden) {
-    mobileNav.hidden = true;
-    menuBtn.setAttribute("aria-expanded", "false");
-    menuBtn.setAttribute("aria-label", "Open menu");
-    menuBtn.focus();
-  }
-});

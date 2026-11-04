@@ -19,23 +19,65 @@
         { key: "movie", path: "movie-plot/", label: "Movie Plot" },
         { key: "article", path: "article/", label: "Article" },
         { key: "changes", path: "changes-made/", label: "Changes Made" },
+        { key: "review", path: "movie-review/", label: "Movie Review" },
       ];
-      const links = (mobile = false) =>
-        routes
-          .map((route) => {
-            const active = current === route.key;
-            return `<a href="${toUrl(route.path)}"${active ? `${mobile ? "" : ' class="is-active"'} aria-current="page"` : ""}>${route.label}</a>`;
-          })
-          .join("");
+      const links = routes
+        .map((route, i) => {
+          const active = current === route.key;
+          return `<a href="${toUrl(route.path)}"${active ? ' class="is-active" aria-current="page"' : ""}><span class="drawer__num">0${i + 1}</span>${route.label}</a>`;
+        })
+        .join("");
+      // 드로어는 header 바깥에 둬야 함 (header의 backdrop-filter 때문에 fixed가 깨짐)
       this.innerHTML = `
         <header class="header${current === "introduce" ? "" : " is-scrolled"}" id="header">
           <div class="header__inner">
             <a class="logo" href="${toUrl()}" aria-label="Layla, go to Introduce">layla</a>
-            <nav class="nav" aria-label="Primary">${links()}</nav>
-            <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav"><span></span><span></span></button>
+            <button class="menuBtn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteDrawer">
+              <span class="menuBtn__text">Menu</span>
+              <span class="menuBtn__lines" aria-hidden="true"><span></span><span></span></span>
+            </button>
           </div>
-          <nav class="mobileNav" id="mobileNav" aria-label="Mobile navigation" hidden>${links(true)}</nav>
-        </header>`;
+        </header>
+        <div class="drawerBackdrop" id="drawerBackdrop" aria-hidden="true"></div>
+        <aside class="drawer" id="siteDrawer" aria-label="Site menu" aria-hidden="true" inert>
+          <div class="drawer__head">
+            <span class="drawer__title">Carving My Path</span>
+            <button class="drawer__close" id="drawerClose" type="button" aria-label="Close menu">&times;</button>
+          </div>
+          <nav class="drawer__nav" aria-label="Primary">${links}</nav>
+          <p class="drawer__foot">Media English Portfolio · Layla</p>
+        </aside>`;
+
+      const root = document.documentElement;
+      const btn = this.querySelector("#menuBtn");
+      const drawer = this.querySelector("#siteDrawer");
+      const closeBtn = this.querySelector("#drawerClose");
+      const open = () => {
+        root.classList.add("drawer-open");
+        drawer.removeAttribute("inert");
+        drawer.setAttribute("aria-hidden", "false");
+        btn.setAttribute("aria-expanded", "true");
+        closeBtn.focus();
+      };
+      const close = (focusBtn = true) => {
+        if (!root.classList.contains("drawer-open")) return;
+        root.classList.remove("drawer-open");
+        drawer.setAttribute("inert", "");
+        drawer.setAttribute("aria-hidden", "true");
+        btn.setAttribute("aria-expanded", "false");
+        if (focusBtn) btn.focus();
+      };
+      btn.addEventListener("click", open);
+      closeBtn.addEventListener("click", () => close());
+      this.querySelector("#drawerBackdrop").addEventListener("click", () =>
+        close(),
+      );
+      drawer
+        .querySelectorAll("a")
+        .forEach((a) => a.addEventListener("click", () => close(false)));
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") close();
+      });
     }
   }
   customElements.define("site-header", SiteHeader);
