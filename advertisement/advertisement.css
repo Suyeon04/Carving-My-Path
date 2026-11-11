@@ -1,0 +1,64 @@
+/* Advertisement page */
+body[data-page="ad"] #advertisement {
+  padding-top: 140px;
+}
+.adIntro {
+  max-width: 760px;
+  margin: 0 0 32px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.82);
+}
+.adFrame {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+}
+.adFrame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+}
+
+.adReflection {
+  margin: 0 auto;
+  padding: 40px 44px;
+  background: var(--cream, #f3eadb);
+  border-left: 5px solid #c8a96a;
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 12px 28px rgba(21, 34, 56, 0.09);
+}
+.adReflection__label {
+  margin: 0 0 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #9a7b45;
+}
+.adReflection h2 {
+  margin: 0 0 16px;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 36px;
+  font-style: italic;
+  color: var(--navy, #152238);
+}
+.adReflection > p:last-child {
+  margin: 0;
+  line-height: 1.8;
+}
+
+@media (max-width: 860px) {
+  body[data-page="ad"] #advertisement {
+    padding-top: 112px;
+  }
+  .adFrame {
+    padding: 6px;
+  }
+  .adReflection {
+    padding: 28px 22px;
+  }
+}

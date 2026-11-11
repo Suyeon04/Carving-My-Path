@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // /advertisement -> /advertisement/ 로 보정 (CSS·JS 경로 깨짐 방지)
+      if (
+        location.protocol !== "file:" &&
+        !/\/$|\.html$/.test(location.pathname)
+      ) {
+        location.replace(
+          location.pathname + "/" + location.search + location.hash,
+        );
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advertisement — Carving My Path</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="advertisement.css" />
+  </head>
+  <body data-page="ad">
+    <a class="skip-link" href="#page-content">Skip to content</a>
+    <site-header></site-header>
+    <main id="page-content">
+      <section class="section section--navy" id="advertisement">
+        <div class="container">
+          <p class="chapterLabel">Media English Assignment · Advertisement</p>
+          <h1 class="section__title">Smoospread</h1>
+          <p class="adIntro">
+            For this assignment, our group picked a "useless invention": butter
+            in a stick, like a glue stick. We named it <em>Smoospread</em> and
+            made a one-page magazine ad for busy working moms. The catchphrase
+            is <strong>"All butter, No bother."</strong>
+          </p>
+
+          <figure class="adFrame">
+            <a
+              href="../assets/img/smoospread-ad.png"
+              target="_blank"
+              rel="noopener"
+            >
+              <!-- 광고 이미지 파일: assets/img/smoospread-ad.png -->
+              <img
+                src="../assets/img/smoospread-ad.png"
+                alt="Smoospread magazine advertisement: All butter, No bother"
+              />
+            </a>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section" id="ad-reflection">
+        <div class="container">
+          <blockquote class="adReflection">
+            <p class="adReflection__label">My Thoughts</p>
+            <h2>Reflection</h2>
+            <p>
+              For this ad, I used AI to make the advertisement image. I told it
+              the mood I wanted, a warm and cozy breakfast table, and it made an
+              image that matched it really well. I could also change small
+              things quickly, like the catchphrase, the layout, and where the
+              logo goes, until it looked like a real magazine ad. It saved a lot
+              of time, so I would like to use AI like this at work in the future
+              too.
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      <site-comments page="Advertisement"></site-comments>
+    </main>
+
+    <site-footer></site-footer>
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+    <script src="../components/comments-data.js" defer></script>
+    <script src="../components/comments.js" defer></script>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>

@@ -20,6 +20,7 @@
         { key: "article", path: "article/", label: "Article" },
         { key: "changes", path: "changes-made/", label: "Changes Made" },
         { key: "review", path: "movie-review/", label: "Movie Review" },
+        { key: "ad", path: "advertisement/", label: "Advertisement" },
       ];
       const links = routes
         .map((route, i) => {
