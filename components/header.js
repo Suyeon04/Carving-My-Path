@@ -21,6 +21,7 @@
         { key: "changes", path: "changes-made/", label: "Changes Made" },
         { key: "review", path: "movie-review/", label: "Movie Review" },
         { key: "ad", path: "advertisement/", label: "Advertisement" },
+        { key: "complaint", path: "complaint-letter/", label: "Complaint Letter" },
       ];
       const links = routes
         .map((route, i) => {
@@ -70,12 +71,10 @@
       };
       btn.addEventListener("click", open);
       closeBtn.addEventListener("click", () => close());
-      this.querySelector("#drawerBackdrop").addEventListener("click", () =>
-        close(),
+      this.querySelector("#drawerBackdrop").addEventListener("click", () => close());
+      drawer.querySelectorAll("a").forEach((a) =>
+        a.addEventListener("click", () => close(false)),
       );
-      drawer
-        .querySelectorAll("a")
-        .forEach((a) => a.addEventListener("click", () => close(false)));
       document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") close();
       });

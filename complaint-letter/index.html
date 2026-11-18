@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // /complaint-letter -> /complaint-letter/ 로 보정 (CSS·JS 경로 깨짐 방지)
+      if (
+        location.protocol !== "file:" &&
+        !/\/$|\.html$/.test(location.pathname)
+      ) {
+        location.replace(
+          location.pathname + "/" + location.search + location.hash,
+        );
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Complaint Letter — Carving My Path</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Great+Vibes&family=Outfit:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="complaint-letter.css" />
+  </head>
+  <body data-page="complaint">
+    <a class="skip-link" href="#page-content">Skip to content</a>
+    <site-header></site-header>
+    <main id="page-content">
+      <section class="section section--navy" id="complaint">
+        <div class="container">
+          <p class="chapterLabel">
+            Media English Assignment · Complaint Letter
+          </p>
+          <h1 class="section__title">Denied Boarding</h1>
+          <p class="clIntro">
+            A formal complaint letter to Frontier Airlines about being denied
+            boarding on an overbooked flight, asking for a refund,
+            reimbursement, and compensation.
+          </p>
+
+          <article class="letter" aria-label="Complaint letter">
+            <address class="letter__sender">
+              Eunji Lee<br />
+              61, Nangok-ro 30-gil<br />
+              Gwanak-gu, Seoul, Republic of Korea<br />
+              +82 010-2398-2129 | leeej2004@gmail.com
+            </address>
+
+            <p class="letter__date">18th November 2026</p>
+
+            <address class="letter__recipient">
+              Mr. James G. Dempsey<br />
+              President &amp; Chief Executive Officer<br />
+              Frontier Airlines, Inc.<br />
+              4545 Airport Way<br />
+              Denver, CO 80239<br />
+              USA
+            </address>
+
+            <p>Dear Mr. Dempsey,</p>
+
+            <p class="letter__re">
+              Re: Denied boarding on Flight F9 1993, November 2, 2026
+            </p>
+
+            <p>
+              I am writing to express my dissatisfaction with how Frontier
+              Airlines handled the denied boarding of my mother and me. I flew
+              with Frontier often while living in the United States, so I was
+              particularly disappointed by this experience.
+            </p>
+            <p>
+              We had purchased two one-way tickets for $301 on Flight F9 1993
+              from Denver to Las Vegas, departing at 10:30 AM. We had checked in
+              online and received boarding passes for seats 18A and 18B. We
+              arrived at the gate on time, but the gate agent told us that the
+              flight was overbooked and that our seats had been given to other
+              passengers. We did not voluntarily give up our seats. The ticket
+              counter was unattended at first, and after waiting about 90
+              minutes, we were told to call customer service. There, the agent
+              asked us to pay an additional $198 for rebooking.
+            </p>
+            <p>
+              Because our hotel in Las Vegas was already booked, we could not
+              postpone our trip. We declined to pay the $198 rebooking fee and
+              instead purchased replacement tickets at our own expense, costing
+              $395. It is unreasonable that we should bear this cost because of
+              Frontier&rsquo;s overbooking.
+            </p>
+            <p>
+              I therefore request a refund of our original $301 tickets,
+              reimbursement of the $395 we paid for replacement tickets, and the
+              compensation required under U.S. Department of Transportation
+              regulations. I would appreciate your response within 14 days of
+              the date of this letter. If the matter is not resolved within this
+              period, I will file a complaint with the DOT, and I will
+              regretfully stop flying with Frontier.
+            </p>
+            <p>
+              Thank you in advance for your prompt attention to this matter.
+            </p>
+
+            <p class="letter__closing">Yours sincerely,</p>
+            <p class="letter__sign">Eunji Lee</p>
+            <p class="letter__name">Eunji Lee</p>
+
+            <p class="letter__enc">
+              Enclosures: Expedia booking confirmation, boarding passes, receipt
+              for replacement tickets
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="cl-reflection">
+        <div class="container">
+          <blockquote class="adReflection">
+            <p class="adReflection__label">My Thoughts</p>
+            <h2>Reflection</h2>
+            <p>
+              I haven&rsquo;t had anything to complain about recently, so I made
+              up a situation for this letter. I chose flight overbooking because
+              it happens more often than I expected. While writing the letter, I
+              learned how to explain the problem clearly, include details like
+              dates and costs, and ask for a specific solution politely but
+              firmly. If I ever have a similar experience in the future, I think
+              I can handle it in this way.
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      <site-comments page="Complaint Letter"></site-comments>
+    </main>
+
+    <site-footer></site-footer>
+    <script src="../components/header.js" defer></script>
+    <script src="../components/footer.js" defer></script>
+    <script src="../components/comments-data.js" defer></script>
+    <script src="../components/comments.js" defer></script>
+    <script src="../js/script.js" defer></script>
+  </body>
+</html>
